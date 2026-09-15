@@ -1,4 +1,4 @@
-## Endstone 服务器测试
+## Endstone 服务器测试 / UV
 bedrock_server/*
 venv/*
 .venv/*

@@ -6,7 +6,7 @@
 
 ### 加入自动签到
 
-#### config.json :
+#### config.jsonc :
 ```json
 {
   "money": "50", // 签到金额

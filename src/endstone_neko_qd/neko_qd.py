@@ -12,10 +12,10 @@ class NekoQD(Plugin):
 
     def __init__(self):
         super().__init__()
-        data_dir = os.path.join(os.getcwd(), "plugins", "cat_sign")
+        data_dir = os.path.join(os.getcwd(), "plugins", "neko_qd")
         if not os.path.exists(data_dir):
             os.makedirs(data_dir)
-        config_data_file = os.path.join(data_dir, "config.json")
+        config_data_file = os.path.join(data_dir, "config.jsonc")
         if not os.path.exists(config_data_file):
             with open(config_data_file, "w", encoding='utf-8') as f:
                 cf_data = {

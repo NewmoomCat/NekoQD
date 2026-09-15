@@ -6,6 +6,9 @@ build-backend = "hatchling.build"
 name = "endstone-neko-qd"
 version = "0.2.5"
 description = "Endstone首款签到"
+dependencies = ["endstone==0.10.7"]
+requires-python = ">=3.11"
+authors = [{ name = "XinYueNeko", email = "3649745663@qq.com" }]
 
 [project.entry-points."endstone"]
 neko-qd = "endstone_neko_qd:NekoQD"

@@ -1,0 +1,7 @@
+[config]
+auto-sign = false
+money = 50
+plugin-title = "签到插件"
+
+[lang]
+# Empty

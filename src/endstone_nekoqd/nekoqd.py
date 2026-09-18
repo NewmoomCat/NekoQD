@@ -38,9 +38,6 @@ class NekoQD(Plugin):
         self.umoney = None
         self.jsonmoney = None
 
-    def on_load(self) -> None:
-        self.save_default_config()
-
     def get_money_plugin(self) -> None:
         self.umoney = self.server.plugin_manager.get_plugin("umoney")
         self.jsonmoney = self.server.plugin_manager.get_plugin("ye111566_jsonmoney")
@@ -51,6 +48,7 @@ class NekoQD(Plugin):
             self.server.plugin_manager.disable_plugin(self)
 
     def on_enable(self) -> None:
+        self.save_default_config()
         self.auto = self.config.get("config.auto-sign")
         self.money_num = self.config.get("config.money")
         self.plugin_title = self.config.get("config.plugin-title")

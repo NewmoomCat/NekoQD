@@ -12,3 +12,18 @@ plugin-title = "签到插件" # 插件log前缀
 
 本插件支持jsonmoney和Umoney经济API
 请根据你的服务器所使用的插件进行选择
+
+**Build:**
+
+Run this (如果你有UV)
+
+```bash
+uv tool run --from build pyproject-build
+```
+
+or
+
+```bash
+pip install pipx # install pipx
+pipx run build wheel
+```

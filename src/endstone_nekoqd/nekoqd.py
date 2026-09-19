@@ -63,7 +63,7 @@ class NekoQD(Plugin):
         elif self.jsonmoney:
             self.jsonmoney.change(player_name, number)
 
-    def _do_sige(self, player: Player) -> bool:
+    def _do_sign(self, player: Player) -> bool:
         today = datetime.date.today().isoformat()
         record_dir = self.data_folder / "data"
         record_dir.mkdir(exist_ok=True)
@@ -74,7 +74,7 @@ class NekoQD(Plugin):
             return False
 
         record_file.write_text('{ "signed": true }', encoding="utf-8")
-        self._change_money(player.name, int(self.money_num))
+        self._change_money(player.name, self.money_num)
         player.send_message(f"{ColorFormat.AQUA}[{self.plugin_title}]{ColorFormat.RESET}签到成功! 您已获得{self.money_num}块钱！")
         return True
 
@@ -87,7 +87,7 @@ class NekoQD(Plugin):
             return False
 
         if command.name == "sign":
-            self._do_sige(sender)
+            self._do_sign(sender)
 
         # Emm...
         return True
@@ -96,5 +96,5 @@ class NekoQD(Plugin):
     def on_player_join(self, event: PlayerJoinEvent) -> None:
         player: Player = event.player
         if self.auto:
-            self._do_sige(player)
+            self._do_sign(player)
             player.send_message(f"{ColorFormat.AQUA}[{self.plugin_title}]{ColorFormat.GRAY}自动签到已开启")

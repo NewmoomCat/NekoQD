@@ -5,9 +5,9 @@ build-backend = "hatchling.build"
 [project]
 name = "endstone-nekoqd"
 version = "0.3.0"
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 authors = [{ name = "XinYueNeko", email = "3649745663@qq.com" }]
 dependencies = [ "endstone==0.11.0" ]
 
 [project.entry-points."endstone"]
-nekoqd = "endstone-nekoqd:NekoQD"
+nekoqd = "endstone_nekoqd:NekoQD"

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "endstone-nekoqd"
-version = "0.3.0"
+version = "0.3.1"
 requires-python = ">=3.11"
 authors = [{ name = "XinYueNeko", email = "3649745663@qq.com" }]
 
